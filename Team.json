@@ -1,0 +1,14 @@
+[
+  {
+    "Name": "Jane Doe",
+    "Email": "jane.doe@example.com",
+    "TrackingTimeId": 100001,
+    "TrelloId": "000000000000000000000001"
+  },
+  {
+    "Name": "John Smith",
+    "Email": "john.smith@example.com",
+    "TrackingTimeId": 100002,
+    "TrelloId": "000000000000000000000002"
+  }
+]

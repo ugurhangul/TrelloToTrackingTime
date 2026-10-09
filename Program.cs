@@ -9,7 +9,7 @@ using Card = TrelloToTrackingTime.TrackingTime.Card;
 using List = TrelloToTrackingTime.TrackingTime.List;
 
 
-var trackingTime = new TrackingTime("REDACTED", "REDACTED");
+var trackingTime = new TrackingTime(Environment.GetEnvironmentVariable("TRACKINGTIME_USERNAME"), Environment.GetEnvironmentVariable("TRACKINGTIME_PASSWORD"));
 
 Console.WriteLine("Fetching Projects");
 var projects = await trackingTime.GetAllProjects();
@@ -23,7 +23,7 @@ var team = JsonConvert.DeserializeObject<List<Team>>(lel);
 var planyway = new TestContext().ReportData.ToList();
 
 
-var trelloClient = new TrelloClient("REDACTED", "REDACTED");
+var trelloClient = new TrelloClient(Environment.GetEnvironmentVariable("TRELLO_API_KEY"), Environment.GetEnvironmentVariable("TRELLO_TOKEN"));
 Console.WriteLine("Fetching Trello Boards");
 var boards = await trelloClient.GetAsync<List<Board>>("/members/5f33edd734dc8f7355e4afee/boards");
 

@@ -18,8 +18,7 @@ public partial class TestContext : DbContext
     public virtual DbSet<ReportDatum> ReportData { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("REDACTED");
+        => optionsBuilder.UseSqlServer(Environment.GetEnvironmentVariable("REPORT_DB_CONNECTION_STRING"));
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

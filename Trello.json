@@ -1,0 +1,22 @@
+{
+  "id": "000000000000000000000000",
+  "name": "Sample Board",
+  "desc": "",
+  "closed": false,
+  "lists": [
+    { "id": "000000000000000000000010", "name": "To Do", "closed": false, "idBoard": "000000000000000000000000" }
+  ],
+  "cards": [
+    {
+      "id": "000000000000000000000100",
+      "name": "Sample card",
+      "desc": "",
+      "closed": false,
+      "idList": "000000000000000000000010",
+      "idMembers": [ "000000000000000000000001" ]
+    }
+  ],
+  "members": [
+    { "id": "000000000000000000000001", "fullName": "Jane Doe", "username": "janedoe" }
+  ]
+}
